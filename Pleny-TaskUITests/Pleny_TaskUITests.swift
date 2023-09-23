@@ -6,7 +6,7 @@
 //
 
 import XCTest
-
+import Pleny_Task
 final class Pleny_TaskUITests: XCTestCase {
 
     override func setUpWithError() throws {
@@ -28,6 +28,15 @@ final class Pleny_TaskUITests: XCTestCase {
         app.launch()
 
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+    }
+    
+    func testLoginButton() throws {
+        let app = XCUIApplication()
+        app.launch()
+     
+        let welcome = app.staticTexts["Welcome"]
+     
+        XCTAssert(welcome.exists)
     }
 
     func testLaunchPerformance() throws {

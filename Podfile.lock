@@ -1,0 +1,41 @@
+PODS:
+  - Alamofire (5.8.0)
+  - IQKeyboardManagerSwift (6.5.12)
+  - Moya (15.0.0):
+    - Moya/Core (= 15.0.0)
+  - Moya/Core (15.0.0):
+    - Alamofire (~> 5.0)
+  - SDWebImage (5.18.1):
+    - SDWebImage/Core (= 5.18.1)
+  - SDWebImage/Core (5.18.1)
+  - SDWebImageSwiftUI (2.2.3):
+    - SDWebImage (~> 5.10)
+  - SwiftGen (6.6.2)
+
+DEPENDENCIES:
+  - Alamofire
+  - IQKeyboardManagerSwift
+  - Moya
+  - SDWebImageSwiftUI
+  - SwiftGen
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Alamofire
+    - IQKeyboardManagerSwift
+    - Moya
+    - SDWebImage
+    - SDWebImageSwiftUI
+    - SwiftGen
+
+SPEC CHECKSUMS:
+  Alamofire: 0e92e751b3e9e66d7982db43919d01f313b8eb91
+  IQKeyboardManagerSwift: 371b08cb39664fb56030f5345c815a4ffc74bbc0
+  Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
+  SDWebImage: ebdbcebc7933a45226d9313bd0118bc052ad458b
+  SDWebImageSwiftUI: 17396b7889f9abc27231caaeb64c537564284aab
+  SwiftGen: 1366a7f71aeef49954ca5a63ba4bef6b0f24138c
+
+PODFILE CHECKSUM: a87fb305d3eed99ca404f46ad869b32824985f29
+
+COCOAPODS: 1.12.1

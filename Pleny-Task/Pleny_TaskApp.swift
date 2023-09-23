@@ -11,7 +11,8 @@ import SwiftUI
 struct Pleny_TaskApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            loginConfigurator.configure()
+//            TabbarView()
         }
     }
 }

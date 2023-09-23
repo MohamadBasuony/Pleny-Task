@@ -1,0 +1,21 @@
+#strings:
+#  inputs: ./Pleny-Task/Support/Resources/Localize/en.lproj
+#  outputs:
+#    templatePath: ./SwiftGenStencils/stirngsTemplate.stencil
+#    output: ./Pleny-Task/Support/Resources/Localize/Strings.swift
+
+xcassets:
+  inputs:
+  - ./Pleny-Task/Support/Resources/Assets/Assets.xcassets
+  - ./Pleny-Task/Support/Resources/Assets/Colors.xcassets
+  outputs:
+    templatePath: ./SwiftGenStencils/xcassets-swiftui.stencil
+    output: ./Pleny-Task/Support/Resources/Assets/Assets.swift
+
+fonts:
+  inputs:
+    - ./Pleny-Task/Support/Resources/Fonts
+  outputs:
+    templatePath: ./SwiftGenStencils/FontSwitUI.stencil
+    output: ./Pleny-Task/Support/Resources/Fonts/Fonts.swift
+
