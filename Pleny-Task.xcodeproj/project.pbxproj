@@ -424,6 +424,7 @@
 			isa = PBXGroup;
 			children = (
 				2CA176722ABE66FC00F7F955 /* Auth */,
+				2CA176B52ABF464300F7F955 /* Posts */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -432,7 +433,6 @@
 			isa = PBXGroup;
 			children = (
 				2CA176702ABE66F200F7F955 /* AuthRepository.swift */,
-				2CA1768B2ABE977C00F7F955 /* PostsRepository.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -535,6 +535,14 @@
 				2CA176B32ABF39AE00F7F955 /* ProfileView.swift */,
 			);
 			path = ProfileView;
+			sourceTree = "<group>";
+		};
+		2CA176B52ABF464300F7F955 /* Posts */ = {
+			isa = PBXGroup;
+			children = (
+				2CA1768B2ABE977C00F7F955 /* PostsRepository.swift */,
+			);
+			path = Posts;
 			sourceTree = "<group>";
 		};
 		7FE113544EC18A9CD4B33045 /* Pods */ = {
