@@ -1036,6 +1036,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Pleny-Task/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
+				EXCLUDED_ARCHS = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Pleny-Task/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -1067,6 +1068,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Pleny-Task/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
+				EXCLUDED_ARCHS = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Pleny-Task/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
