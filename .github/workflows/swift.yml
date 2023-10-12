@@ -28,4 +28,4 @@ jobs:
       run: /usr/bin/xcodebuild -version
       
     - name: Build and Test
-      run: xcodebuild test -workspace Pleny-Task/Pleny-Task.xcworkspace -scheme "Pleny-Task" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -sdk  iphonesimulator -destination "platform=iOS Simulator,name=iPhone 15 Pro,OS=17.0" ONLY_ACTIVE_ARCH=NO 
+      run: xcodebuild test -workspace Pleny-Task.xcworkspace -scheme "Pleny-Task" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -sdk  iphonesimulator -destination "platform=iOS Simulator,name=iPhone 15 Pro,OS=17.0" ONLY_ACTIVE_ARCH=NO 
