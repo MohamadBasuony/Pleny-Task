@@ -1,0 +1,42 @@
+# This workflow will build a Swift project
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-swift
+
+name: Swift
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-and-test:
+    # The type of runner that the job will run on
+    runs-on: macos-13
+
+    timeout-minutes: 25
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+    - uses: actions/checkout@v3
+
+    - name: Select Xcode
+      run: sudo xcode-select -switch /Applications/Xcode_15.0.app
+      
+    - name: Xcode version
+      run: /usr/bin/xcodebuild -version
+
+    - name: Install Dependencies
+      run: |
+        pod install --repo-update
+        xcodebuild clean test -workspace Pleny-Task.xcworkspace -scheme "Pleny-Task" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -sdk  iphonesimulator -destination "platform=iOS Simulator,name=iPhone 15 Pro,OS=17.0" ONLY_ACTIVE_ARCH=NO 
+
+      shell: bash
+    - uses: ty0x2333/cocoapods-action@master
+      with:
+        additional_build_params: -destination 'platform=iOS Simulator,name=iPhone 11,OS=13.0'
+        additional_lint_params: --private
+      
+    - name: Build and Test
+      run: xcodebuild test -workspace Pleny-Task.xcworkspace -scheme "Pleny-Task" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -sdk  iphonesimulator -destination "platform=iOS Simulator,name=iPhone 15 Pro,OS=17.0" ONLY_ACTIVE_ARCH=NO 
