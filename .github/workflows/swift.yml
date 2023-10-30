@@ -35,12 +35,12 @@ jobs:
 
     - name: Build
       run: |
-        cd Pleny-Task
+        # cd Pleny-Task
         xcodebuild build -workspace Pleny-Task.xcworkspace -scheme Pleny-Task clean build -sdk iphoneos CODE_SIGNING_ALLOWED=No
 
     - name: Run tests
       run: |
-        cd Pleny-Task
+        # cd Pleny-Task
         xcodebuild test -workspace Pleny-Task.xcworkspace -scheme Pleny-Task clean build -sdk iphoneos -destination "platform=iOS Simulator,OS=16.1,name=iPhone 14 Pro Max" CODE_SIGNING_ALLOWED=No
         
 # jobs:
