@@ -22,11 +22,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Install Dependencies
-      run: |
-        cd Pleny-Task
-        pod install --repo-update
-      shell: bash
+    # - name: Install Dependencies
+    #   run: |
+    #     cd Pleny-Task
+    #     pod install --repo-update
+    #   shell: bash
 
     - name: Xcode Setup
       uses: maxim-lobanov/setup-xcode@v1
