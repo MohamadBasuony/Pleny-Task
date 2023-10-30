@@ -27,8 +27,8 @@ jobs:
     steps:
     - name: setup-cocoapods
       uses: maxim-lobanov/setup-cocoapods@v1
-      with:
-        podfile-path: Podfile.lock
+      # with:
+        # podfile-path: Pleny-Task/Podfile.lock
       
     - name: Build and Test
       run: xcodebuild test -workspace Pleny-Task.xcworkspace -scheme "Pleny-Task" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -sdk  iphonesimulator -destination "platform=iOS Simulator,name=iPhone 15 Pro,OS=17.0" ONLY_ACTIVE_ARCH=NO 
