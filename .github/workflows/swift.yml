@@ -35,4 +35,4 @@ jobs:
         # podfile-path: Pleny-Task/Podfile.lock
       
     - name: Build and Test
-      run: xcodebuild test -workspace Pleny-Task.xcworkspace -scheme "Pleny-Task" -destination 'platform=iOS Simulator,name=iPhone 12' 
+      run: xcodebuild test -workspace Pleny-Task.xcworkspace -scheme "Pleny-Task" -destination 'platform=iOS Simulator,name=iPhone 13' 
