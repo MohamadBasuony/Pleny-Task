@@ -21,14 +21,14 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v3
 
-  build:
-    name: Setup Cocoapods based on provided version
-    runs-on: macos-latest
-    steps:
-    - name: setup-cocoapods
-      uses: maxim-lobanov/setup-cocoapods@v1
-      with:
-        version: 1.9.0
+  # build:
+  #   name: Setup Cocoapods based on provided version
+  #   runs-on: macos-latest
+  #   steps:
+  #   - name: setup-cocoapods
+  #     uses: maxim-lobanov/setup-cocoapods@v1
+  #     with:
+  #       version: 1.9.0
 
 
       # with:
