@@ -10,25 +10,35 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build-and-test:
-    # The type of runner that the job will run on
-    runs-on: macos-13
-
-    timeout-minutes: 25
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
+  build:
+    name: Swift ${{ matrix.swift }} on ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+        swift: ["5.2", "5.3"]
+    runs-on: ${{ matrix.os }}
     steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v3
+      - uses: swift-actions/setup-swift@65540b95f51493d65f5e59e97dcef9629ddf11bf
+        with:
+          swift-version: ${{ matrix.swift }}
+      - uses: actions/checkout@v4
+      - name: Build
+        run: swift build
+      - name: Run tests
+        run: swift test
+        
+# jobs:
+#   build-and-test:
+#     # The type of runner that the job will run on
+#     runs-on: macos-13
+
+#     timeout-minutes: 25
+
+#     # Steps represent a sequence of tasks that will be executed as part of the job
+#     steps:
+#     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+#     - uses: actions/checkout@v3
     
-    - name: Xcode Test
-          uses: devbotsxyz/xcode-test@v1.1.0
-          with:
-            project: 'project.xsproj' # `project` and `workspace` cannot be used at the same time
-            workspace: 'workspace.xcworkspace' # `project` and `workspace` cannot be used at the same time
-            scheme: 'scheme'
-            configuration: Debug
-            destination: platform=iOS Simulator,OS=latest,name=iPhone 11
   # build:
   #   name: Setup Cocoapods based on provided version
   #   runs-on: macos-latest
