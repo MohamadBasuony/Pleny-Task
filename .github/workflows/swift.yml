@@ -20,7 +20,15 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v3
-
+    
+    - name: Xcode Test
+          uses: devbotsxyz/xcode-test@v1.1.0
+          with:
+            project: 'project.xsproj' # `project` and `workspace` cannot be used at the same time
+            workspace: 'workspace.xcworkspace' # `project` and `workspace` cannot be used at the same time
+            scheme: 'scheme'
+            configuration: Debug
+            destination: platform=iOS Simulator,OS=latest,name=iPhone 11
   # build:
   #   name: Setup Cocoapods based on provided version
   #   runs-on: macos-latest
@@ -34,5 +42,5 @@ jobs:
       # with:
         # podfile-path: Pleny-Task/Podfile.lock
       
-    - name: Build and Test
-      run: xcodebuild test -workspace Pleny-Task.xcworkspace -scheme "Pleny-Task" -destination 'platform:iOS Simulator, OS:17.0.1, name:iPhone 14 Pro'
+    # - name: Build and Test
+    #   run: xcodebuild test -workspace Pleny-Task.xcworkspace -scheme "Pleny-Task" -destination 'platform:iOS Simulator, OS:17.0.1, name:iPhone 14 Pro'
