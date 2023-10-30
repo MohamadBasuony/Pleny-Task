@@ -11,6 +11,8 @@ target 'Pleny-Task' do
     pod 'IQKeyboardManagerSwift'
     pod 'Alamofire'
     pod 'Moya'
+    pod 'SwiftLint'
+
 
   target 'Pleny-TaskTests' do
     inherit! :search_paths
