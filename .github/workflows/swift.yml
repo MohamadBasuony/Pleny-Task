@@ -21,6 +21,12 @@ jobs:
     runs-on: macos-12
 
     steps:
+
+    - name: setup-cocoapods
+      uses: maxim-lobanov/setup-cocoapods@v1
+      with:
+        version: 1.9.0
+        
     - uses: actions/checkout@v3
     - name: Install Dependencies
       run: |
