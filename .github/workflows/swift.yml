@@ -21,7 +21,7 @@ jobs:
       run: |
         set -o pipefail && \
         xcodebuild -project Pleny-Task.xcodeproj \
-        -scheme Pleny-Task \
+        -scheme Pleny-TaskTests \
         -destination "${destination}" \
         test | xcpretty
       env:
