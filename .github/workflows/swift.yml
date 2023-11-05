@@ -10,22 +10,16 @@ on:
     branches: [ "main" ]
 
 jobs:
-  test:
-    runs-on: macOS-latest
-    strategy:
-      matrix:
-        destination: ['platform=iOS Simulator,name=iPhone 12 Pro']
+test:
+    runs-on: macos-latest
+
     steps:
-    - uses: actions/checkout@v1
-    - name: Run unit tests
-      run: |
-        set -o pipefail && \
-        xcodebuild -project Pleny-Task.xcodeproj \
-        -scheme Pleny-TaskTests \
-        -destination "${destination}" \
-        test | xcpretty
-      env:
-        destination: ${{ matrix.destination }}
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Build and Test
+        # run: xcodebuild test -workspace REFD-Customer.xcworkspace -scheme "REFD-CustomerTests" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -sdk  iphonesimulator -destination "platform:iOS, id:dvtdevice-DVTiPhonePlaceholder-iphoneos:placeholder, name:Any iOS Device" ONLY_ACTIVE_ARCH=NO 
+        run: xcodebuild -scheme REFD-CustomerTests -destination "platform=iOS Simulator,OS=15.0,name=iPhone 13" test
   # SwiftLint:
   #   runs-on: ubuntu-latest
   #   steps:
