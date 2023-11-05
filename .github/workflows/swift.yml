@@ -19,7 +19,7 @@ jobs:
 
       - name: Build and Test
         # run: xcodebuild test -workspace REFD-Customer.xcworkspace -scheme "REFD-CustomerTests" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -sdk  iphonesimulator -destination "platform:iOS, id:dvtdevice-DVTiPhonePlaceholder-iphoneos:placeholder, name:Any iOS Device" ONLY_ACTIVE_ARCH=NO 
-        run: xcodebuild -scheme Pleny-Task -destination "platform:iOS Simulator, OS:16.2, name:iPhone 13 Pro" test
+        run: xcodebuild -scheme Pleny-Task -destination 'platform:iOS Simulator, OS:16.2, name:iPhone 13 Pro' test
   # SwiftLint:
   #   runs-on: ubuntu-latest
   #   steps:
