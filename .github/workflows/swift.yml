@@ -10,7 +10,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-test:
+  test:
     runs-on: macos-latest
 
     steps:
