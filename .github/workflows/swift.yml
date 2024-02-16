@@ -10,23 +10,14 @@ on:
     branches: [ "main" ]
 
 jobs:
-  install-on-clean-machine:
-    name: install on clean machine
+  build:
+    name: Setup Cocoapods based on provided version
     runs-on: macos-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@v2
-    
-    - name: Remove pre-installed version
-      run: gem uninstall cocoapods --all --executables --ignore-dependencies
-
     - name: setup-cocoapods
-      uses: ./
+      uses: maxim-lobanov/setup-cocoapods@v1
       with:
-        version: 1.5.3
-
-    - name: Validate version
-      run: pod --version | grep "1.5.3"
+        version: 1.9.0
       
   test:
     runs-on: macos-11
