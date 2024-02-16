@@ -10,12 +10,31 @@ on:
     branches: [ "main" ]
 
 jobs:
+  install-on-clean-machine:
+    name: install on clean machine
+    runs-on: macos-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    
+    - name: Remove pre-installed version
+      run: gem uninstall cocoapods --all --executables --ignore-dependencies
+
+    - name: setup-cocoapods
+      uses: ./
+      with:
+        version: 1.5.3
+
+    - name: Validate version
+      run: pod --version | grep "1.5.3"
+      
   test:
     runs-on: macos-11
     steps:
       - uses: actions/checkout@v2
       - name: Select Xcode
         run: sudo Xcode-select -switch /Applications/Xcode_13.2.1.app
+        
       - name: Build & Test
         run: xcodebuild clean build test -workspace Pleny-Task.xcworkspace -scheme "Pleny-Task" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -destination 'platform=iOS Simulator,name=iPhone 13 Pro'
   # SwiftLint:
