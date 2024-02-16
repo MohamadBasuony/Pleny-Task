@@ -32,7 +32,6 @@
 		2C33E9A62AB7AC94000959ED /* Fonts+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C33E9A52AB7AC93000959ED /* Fonts+Extension.swift */; };
 		2C33E9AA2AB7B5DD000959ED /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C33E9A92AB7B5DD000959ED /* MainButton.swift */; };
 		2CA176532ABE5AD700F7F955 /* LoaderUI in Frameworks */ = {isa = PBXBuildFile; productRef = 2CA176522ABE5AD700F7F955 /* LoaderUI */; };
-		2CA176562ABE5B1800F7F955 /* SwiftMessages in Frameworks */ = {isa = PBXBuildFile; productRef = 2CA176552ABE5B1800F7F955 /* SwiftMessages */; };
 		2CA1765A2ABE5C7F00F7F955 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA176592ABE5C7F00F7F955 /* LoginViewModel.swift */; };
 		2CA1765E2ABE5F1300F7F955 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA1765D2ABE5F1300F7F955 /* LoginModel.swift */; };
 		2CA176612ABE605500F7F955 /* Publishable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA176602ABE605500F7F955 /* Publishable+Extension.swift */; };
@@ -169,7 +168,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F0DFE3182BCA8CE9C9F9BBD /* Pods_Pleny_Task.framework in Frameworks */,
-				2CA176562ABE5B1800F7F955 /* SwiftMessages in Frameworks */,
 				2CA176532ABE5AD700F7F955 /* LoaderUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -579,7 +577,6 @@
 			name = "Pleny-Task";
 			packageProductDependencies = (
 				2CA176522ABE5AD700F7F955 /* LoaderUI */,
-				2CA176552ABE5B1800F7F955 /* SwiftMessages */,
 			);
 			productName = "Pleny-Task";
 			productReference = 2C33E9482AB79232000959ED /* Pleny-Task.app */;
@@ -658,7 +655,6 @@
 			mainGroup = 2C33E93F2AB79232000959ED;
 			packageReferences = (
 				2CA176512ABE5AD700F7F955 /* XCRemoteSwiftPackageReference "LoaderUI" */,
-				2CA176542ABE5B1800F7F955 /* XCRemoteSwiftPackageReference "SwiftMessages" */,
 			);
 			productRefGroup = 2C33E9492AB79232000959ED /* Products */;
 			projectDirPath = "";
@@ -800,9 +796,11 @@
 			files = (
 			);
 			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Pleny-Task-Pleny-TaskUITests/Pods-Pleny-Task-Pleny-TaskUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Pleny-Task-Pleny-TaskUITests/Pods-Pleny-Task-Pleny-TaskUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -815,9 +813,11 @@
 			files = (
 			);
 			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Pleny-Task/Pods-Pleny-Task-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Pleny-Task/Pods-Pleny-Task-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1024,6 +1024,7 @@
 		};
 		2C33E96D2AB79234000959ED /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F7C430A5134FF13CACA18FB /* Pods-Pleny-Task.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1055,6 +1056,7 @@
 		};
 		2C33E96E2AB79234000959ED /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95968073AF2721F12BC27D4D /* Pods-Pleny-Task.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1086,6 +1088,7 @@
 		};
 		2C33E9702AB79234000959ED /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B3FCAC24F00DC9F67B00181 /* Pods-Pleny-TaskTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1105,6 +1108,7 @@
 		};
 		2C33E9712AB79234000959ED /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78AD79C831C34FCDB4DA65D8 /* Pods-Pleny-TaskTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1124,6 +1128,7 @@
 		};
 		2C33E9732AB79234000959ED /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 693980328121DBF69655E27C /* Pods-Pleny-Task-Pleny-TaskUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1141,6 +1146,7 @@
 		};
 		2C33E9742AB79234000959ED /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5524E3CAB9981561F7F4D32E /* Pods-Pleny-Task-Pleny-TaskUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1206,14 +1212,6 @@
 				minimumVersion = 0.1.0;
 			};
 		};
-		2CA176542ABE5B1800F7F955 /* XCRemoteSwiftPackageReference "SwiftMessages" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SwiftKickMobile/SwiftMessages";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 9.0.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1221,11 +1219,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2CA176512ABE5AD700F7F955 /* XCRemoteSwiftPackageReference "LoaderUI" */;
 			productName = LoaderUI;
-		};
-		2CA176552ABE5B1800F7F955 /* SwiftMessages */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2CA176542ABE5B1800F7F955 /* XCRemoteSwiftPackageReference "SwiftMessages" */;
-			productName = SwiftMessages;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
